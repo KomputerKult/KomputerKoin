@@ -1,8 +1,8 @@
 #!/usr/bin/env python
-# Simulate a maximal block attack on the Monero network
+# Simulate a maximal block attack on the KomputerKult network
 # This uses the scheme proposed by ArticMine
 # Written by Sarang Nother
-# Copyright (c) 2019-2020 The Monero Project
+# Copyright (c) 2019-2020 The KomputerKult Project
 from __future__ import print_function
 import sys
 import math

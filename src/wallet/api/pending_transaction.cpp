@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2020, The Monero Project
+// Copyright (c) 2014-2020, The KomputerKult Project
 //
 // All rights reserved.
 //
@@ -44,7 +44,7 @@
 
 using namespace std;
 
-namespace Monero {
+namespace KomputerKult {
 
 PendingTransaction::~PendingTransaction() {}
 
@@ -265,5 +265,5 @@ std::vector<std::string> PendingTransactionImpl::signersKeys() const {
 
 }
 
-namespace Bitmonero = Monero;
+namespace Bitkomputerkoin = KomputerKult;
 

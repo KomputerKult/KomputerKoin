@@ -74,7 +74,7 @@ jobs:
         echo "Acquire::ftp::Timeout \"120\";" | sudo tee -a /etc/apt/apt.conf.d/80-custom
     - name: update apt
       run: sudo apt update
-    - name: install monero dependencies
+    - name: install komputerkoin dependencies
       run: sudo apt -y install build-essential cmake libboost-all-dev miniupnpc libunbound-dev graphviz doxygen libunwind8-dev pkg-config libssl-dev libzmq3-dev libsodium-dev libhidapi-dev libnorm-dev libusb-1.0-0-dev libpgm-dev libprotobuf-dev protobuf-compiler ccache
     - name: build
       run: |
@@ -104,7 +104,7 @@ jobs:
         echo "Acquire::ftp::Timeout \"120\";" | sudo tee -a /etc/apt/apt.conf.d/80-custom
     - name: update apt
       run: sudo apt update
-    - name: install monero dependencies
+    - name: install komputerkoin dependencies
       run: sudo apt -y install build-essential cmake libboost-all-dev miniupnpc libunbound-dev graphviz doxygen libunwind8-dev pkg-config libssl-dev libzmq3-dev libsodium-dev libhidapi-dev libnorm-dev libusb-1.0-0-dev libpgm-dev libprotobuf-dev protobuf-compiler ccache
     - name: build
       run: |
@@ -137,7 +137,7 @@ jobs:
         echo "Acquire::ftp::Timeout \"120\";" | sudo tee -a /etc/apt/apt.conf.d/80-custom
     - name: update apt
       run: sudo apt update
-    - name: install monero dependencies
+    - name: install komputerkoin dependencies
       run: sudo apt -y install build-essential cmake libboost-all-dev miniupnpc libunbound-dev graphviz doxygen libunwind8-dev pkg-config libssl-dev libzmq3-dev libsodium-dev libhidapi-dev libnorm-dev libusb-1.0-0-dev libpgm-dev libprotobuf-dev protobuf-compiler ccache
     - name: install Python dependencies
       run: pip install requests psutil monotonic

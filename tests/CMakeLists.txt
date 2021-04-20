@@ -1,4 +1,4 @@
-# Copyright (c) 2014-2020, The Monero Project
+# Copyright (c) 2014-2020, The KomputerKult Project
 # 
 # All rights reserved.
 # 
@@ -76,8 +76,8 @@ file(COPY
   data/wallet_9svHk1.keys
   data/wallet_9svHk1
   data/outputs
-  data/unsigned_monero_tx
-  data/signed_monero_tx
+  data/unsigned_komputerkoin_tx
+  data/signed_komputerkoin_tx
   DESTINATION data)
 
 if (CMAKE_BUILD_TYPE STREQUAL "fuzz" OR OSSFUZZ)
@@ -111,7 +111,7 @@ set(hash_targets_sources
 
 set(hash_targets_headers)
 
-monero_add_minimal_executable(hash-target-tests
+komputerkoin_add_minimal_executable(hash-target-tests
   ${hash_targets_sources}
   ${hash_targets_headers})
 target_link_libraries(hash-target-tests
@@ -130,7 +130,7 @@ add_test(
 #
 if (${MONERO_WALLET_CRYPTO_BENCH} STREQUAL "auto")
   set(MONERO_WALLET_CRYPTO_BENCH "cn")
-  monero_crypto_autodetect(AVAILABLE BEST)
+  komputerkoin_crypto_autodetect(AVAILABLE BEST)
   if (DEFINED AVAILABLE)
     list(APPEND MONERO_WALLET_CRYPTO_BENCH ${AVAILABLE})
   endif ()
@@ -141,23 +141,23 @@ list(REMOVE_DUPLICATES MONERO_WALLET_CRYPTO_BENCH)
 list(REMOVE_ITEM MONERO_WALLET_CRYPTO_BENCH "cn") # always used for comparison
 set(MONERO_WALLET_CRYPTO_BENCH_NAMES "(cn)")
 foreach(BENCH IN LISTS MONERO_WALLET_CRYPTO_BENCH)
-  monero_crypto_valid(${BENCH} VALID)
+  komputerkoin_crypto_valid(${BENCH} VALID)
   if (NOT VALID)
     message(FATAL_ERROR "Invalid MONERO_WALLET_CRYPTO_BENCH option ${BENCH}")
   endif ()
 
-  monero_crypto_get_target(${BENCH} BENCH_LIBRARY)
+  komputerkoin_crypto_get_target(${BENCH} BENCH_LIBRARY)
   list(APPEND BENCH_OBJECTS $<TARGET_OBJECTS:${BENCH_LIBRARY}>)
 
-  monero_crypto_get_namespace(${BENCH} BENCH_NAMESPACE)
+  komputerkoin_crypto_get_namespace(${BENCH} BENCH_NAMESPACE)
   set(MONERO_WALLET_CRYPTO_BENCH_NAMES "${MONERO_WALLET_CRYPTO_BENCH_NAMES}(${BENCH_NAMESPACE})")
 endforeach ()
 
 configure_file("${CMAKE_CURRENT_SOURCE_DIR}/benchmark.h.in" "${MONERO_GENERATED_HEADERS_DIR}/tests/benchmark.h")
-monero_add_minimal_executable(monero-wallet-crypto-bench benchmark.cpp ${BENCH_OBJECTS})
-target_link_libraries(monero-wallet-crypto-bench cncrypto)
+komputerkoin_add_minimal_executable(komputerkoin-wallet-crypto-bench benchmark.cpp ${BENCH_OBJECTS})
+target_link_libraries(komputerkoin-wallet-crypto-bench cncrypto)
 
-add_test(NAME wallet-crypto-bench COMMAND monero-wallet-crypto-bench)
+add_test(NAME wallet-crypto-bench COMMAND komputerkoin-wallet-crypto-bench)
 
 
 set(enabled_tests

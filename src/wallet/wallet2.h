@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2020, The Monero Project
+// Copyright (c) 2014-2020, The KomputerKult Project
 // 
 // All rights reserved.
 // 
@@ -1139,7 +1139,7 @@ private:
     }
 
     BEGIN_SERIALIZE_OBJECT()
-      MAGIC_FIELD("monero wallet cache")
+      MAGIC_FIELD("komputerkoin wallet cache")
       VERSION_FIELD(0)
       FIELD(m_blockchain)
       FIELD(m_transfers)

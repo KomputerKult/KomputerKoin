@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2020, The Monero Project
+// Copyright (c) 2014-2020, The KomputerKult Project
 //
 // All rights reserved.
 //
@@ -965,7 +965,7 @@ start:
     MGINFO("START DUMP");
     MGINFO(ss.str());
     MGINFO("END DUMP");
-    MGINFO("Please send moneromooo on Freenode the contents of this log, from a couple dozen lines before START DUMP to END DUMP");
+    MGINFO("Please send komputerkoinmooo on Freenode the contents of this log, from a couple dozen lines before START DUMP to END DUMP");
   }
   return diff;
 }
@@ -4555,7 +4555,7 @@ void Blockchain::check_against_checkpoints(const checkpoints& points, bool enfor
       }
       else
       {
-        LOG_ERROR("WARNING: local blockchain failed to pass a MoneroPulse checkpoint, and you could be on a fork. You should either sync up from scratch, OR download a fresh blockchain bootstrap, OR enable checkpoint enforcing with the --enforce-dns-checkpointing command-line option");
+        LOG_ERROR("WARNING: local blockchain failed to pass a KomputerKultPulse checkpoint, and you could be on a fork. You should either sync up from scratch, OR download a fresh blockchain bootstrap, OR enable checkpoint enforcing with the --enforce-dns-checkpointing command-line option");
       }
     }
   }

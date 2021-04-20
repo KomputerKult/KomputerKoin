@@ -1,4 +1,4 @@
-# Copyright (c) 2014-2020, The Monero Project
+# Copyright (c) 2014-2020, The KomputerKult Project
 #
 # All rights reserved.
 #
@@ -63,9 +63,9 @@ set(cryptonote_basic_private_headers
   tx_extra.h
   verification_context.h)
 
-monero_private_headers(cryptonote_basic
+komputerkoin_private_headers(cryptonote_basic
   ${cryptonote_basic_private_headers})
-monero_add_library(cryptonote_basic
+komputerkoin_add_library(cryptonote_basic
   ${cryptonote_basic_sources}
   ${cryptonote_basic_headers}
   ${cryptonote_basic_private_headers})

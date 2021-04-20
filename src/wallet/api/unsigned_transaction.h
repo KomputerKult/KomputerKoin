@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2020, The Monero Project
+// Copyright (c) 2014-2020, The KomputerKult Project
 //
 // All rights reserved.
 //
@@ -35,7 +35,7 @@
 #include <vector>
 
 
-namespace Monero {
+namespace KomputerKult {
 
 class WalletImpl;
 class UnsignedTransactionImpl : public UnsignedTransaction
@@ -72,4 +72,4 @@ private:
 
 }
 
-namespace Bitmonero = Monero;
+namespace Bitkomputerkoin = KomputerKult;

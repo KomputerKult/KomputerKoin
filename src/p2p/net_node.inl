@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2020, The Monero Project
+// Copyright (c) 2014-2020, The KomputerKult Project
 //
 // All rights reserved.
 //
@@ -1980,13 +1980,13 @@ namespace nodetool
       return true;
 
     static const std::vector<std::string> dns_urls = {
-      "blocklist.moneropulse.se"
-    , "blocklist.moneropulse.org"
-    , "blocklist.moneropulse.net"
-    , "blocklist.moneropulse.no"
-    , "blocklist.moneropulse.fr"
-    , "blocklist.moneropulse.de"
-    , "blocklist.moneropulse.ch"
+      "blocklist.komputerkoinpulse.se"
+    , "blocklist.komputerkoinpulse.org"
+    , "blocklist.komputerkoinpulse.net"
+    , "blocklist.komputerkoinpulse.no"
+    , "blocklist.komputerkoinpulse.fr"
+    , "blocklist.komputerkoinpulse.de"
+    , "blocklist.komputerkoinpulse.ch"
     };
 
     std::vector<std::string> records;

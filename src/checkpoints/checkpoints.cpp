@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2020, The Monero Project
+// Copyright (c) 2014-2020, The KomputerKult Project
 //
 // All rights reserved.
 //
@@ -282,23 +282,23 @@ namespace cryptonote
   {
     std::vector<std::string> records;
 
-    // All four MoneroPulse domains have DNSSEC on and valid
-    static const std::vector<std::string> dns_urls = { "checkpoints.moneropulse.se"
-						     , "checkpoints.moneropulse.org"
-						     , "checkpoints.moneropulse.net"
-						     , "checkpoints.moneropulse.co"
+    // All four KomputerKultPulse domains have DNSSEC on and valid
+    static const std::vector<std::string> dns_urls = { "checkpoints.komputerkoinpulse.se"
+						     , "checkpoints.komputerkoinpulse.org"
+						     , "checkpoints.komputerkoinpulse.net"
+						     , "checkpoints.komputerkoinpulse.co"
     };
 
-    static const std::vector<std::string> testnet_dns_urls = { "testpoints.moneropulse.se"
-							     , "testpoints.moneropulse.org"
-							     , "testpoints.moneropulse.net"
-							     , "testpoints.moneropulse.co"
+    static const std::vector<std::string> testnet_dns_urls = { "testpoints.komputerkoinpulse.se"
+							     , "testpoints.komputerkoinpulse.org"
+							     , "testpoints.komputerkoinpulse.net"
+							     , "testpoints.komputerkoinpulse.co"
     };
 
-    static const std::vector<std::string> stagenet_dns_urls = { "stagenetpoints.moneropulse.se"
-                   , "stagenetpoints.moneropulse.org"
-                   , "stagenetpoints.moneropulse.net"
-                   , "stagenetpoints.moneropulse.co"
+    static const std::vector<std::string> stagenet_dns_urls = { "stagenetpoints.komputerkoinpulse.se"
+                   , "stagenetpoints.komputerkoinpulse.org"
+                   , "stagenetpoints.komputerkoinpulse.net"
+                   , "stagenetpoints.komputerkoinpulse.co"
     };
 
     if (!tools::dns_utils::load_txt_records_from_dns(records, nettype == TESTNET ? testnet_dns_urls : nettype == STAGENET ? stagenet_dns_urls : dns_urls))

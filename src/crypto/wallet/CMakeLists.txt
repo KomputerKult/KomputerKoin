@@ -1,4 +1,4 @@
-# Copyright (c) 2020, The Monero Project
+# Copyright (c) 2020, The KomputerKult Project
 #
 # All rights reserved.
 #
@@ -35,7 +35,7 @@ set(MONERO_WALLET_CRYPTO_LIBRARY "auto" CACHE STRING "Select a wallet crypto lib
 # If the user specified "auto", detect best library defaulting to internal.
 #
 if (${MONERO_WALLET_CRYPTO_LIBRARY} STREQUAL "auto")
-   monero_crypto_autodetect(AVAILABLE BEST)
+   komputerkoin_crypto_autodetect(AVAILABLE BEST)
   if (DEFINED BEST)
     message("Wallet crypto is using ${BEST} backend")
     set(MONERO_WALLET_CRYPTO_LIBRARY ${BEST})
@@ -53,8 +53,8 @@ if (${MONERO_WALLET_CRYPTO_LIBRARY} STREQUAL "cn")
   configure_file(${CMAKE_CURRENT_SOURCE_DIR}/empty.h.in ${MONERO_GENERATED_HEADERS_DIR}/crypto/wallet/ops.h)
   add_library(wallet-crypto ALIAS cncrypto)
 else ()
-  monero_crypto_generate_header(${MONERO_WALLET_CRYPTO_LIBRARY} "${MONERO_GENERATED_HEADERS_DIR}/crypto/wallet/ops.h")
-  monero_crypto_get_target(${MONERO_WALLET_CRYPTO_LIBRARY} CRYPTO_TARGET)
+  komputerkoin_crypto_generate_header(${MONERO_WALLET_CRYPTO_LIBRARY} "${MONERO_GENERATED_HEADERS_DIR}/crypto/wallet/ops.h")
+  komputerkoin_crypto_get_target(${MONERO_WALLET_CRYPTO_LIBRARY} CRYPTO_TARGET)
   add_library(wallet-crypto $<TARGET_OBJECTS:${CRYPTO_TARGET}>)
   target_link_libraries(wallet-crypto cncrypto)
 endif ()
